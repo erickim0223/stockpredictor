@@ -1,7 +1,7 @@
 import java.util.*;
 
-public class Stack {
-    List<Integer> stack = new ArrayList<Integer>();
+public class Stack<T> {
+    List<T> stack = new ArrayList<T>();
     int size = 0;
 
     boolean isEmpty() {
@@ -15,16 +15,16 @@ public class Stack {
         return (int)stack.get(size - 1);
     }
 
-    public void push(int val) {
+    public void push(T val) {
         stack.add(val);
         size++;
     }
 
-    public int pop() {
+    public T pop() {
         if (isEmpty()) {
-            return -1;
+            return null;
         }
-        int temp = (int)stack.get(size - 1);
+        T temp = (T)stack.get(size - 1);
         stack.remove(size - 1);
         size--;
         return temp;
@@ -33,13 +33,13 @@ public class Stack {
     public String toString() {
         String str = "Current Stack:\n";
         for (int i = size; i > 0; i--) {
-            str += Integer.toString(stack.get(i - 1));
+            str += String.valueOf(stack.get(i - 1));
             str += "\n";
         }
         return str;
     }
     public static void main(String[] args) {
-        Stack s = new Stack();
+        Stack<Integer> s = new Stack<Integer>();
         System.out.println(s.isEmpty());
         System.out.println(s.toString());
         System.out.println(s.top());
@@ -68,8 +68,8 @@ public class Stack {
         s.pop();
         System.out.println(s.toString());
         System.out.println(s.isEmpty());
-        Stack s2 = new Stack();
-        
+        Stack<Integer> s2 = new Stack<Integer>();
+
         s2.push(1);
         System.out.println(s.size);
         System.out.println(s2.size);
