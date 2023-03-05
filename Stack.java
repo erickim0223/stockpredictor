@@ -1,3 +1,5 @@
+// A generic stack implementation by using an ArrayList
+
 import java.util.*;
 
 public class Stack<T> {
@@ -8,11 +10,11 @@ public class Stack<T> {
         return size == 0;
     }
 
-    public int top() {
+    public T top() {
         if (isEmpty()) {
-            return -1;
+            return null;
         }
-        return (int)stack.get(size - 1);
+        return (T)stack.get(size - 1);
     }
 
     public void push(T val) {
@@ -73,6 +75,17 @@ public class Stack<T> {
         s2.push(1);
         System.out.println(s.size);
         System.out.println(s2.size);
+
+
+        Stack<String> s3 = new Stack<String>();
+        s3.push("hello");
+        s3.push("hi");
+        s3.push("hey");
+        System.out.println(s3.size);
+        System.out.println(s3.top());
+        System.out.println(s3.toString());
+        s3.pop();
+        System.out.println(s3.toString());
 
     }
 }
