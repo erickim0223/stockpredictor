@@ -4,44 +4,58 @@ import java.util.*;
 
 public class Stack<T> {
     List<T> stack = new ArrayList<T>();
-    int size = 0;
+    int top = -1;
+    int size;
+
+    //constructor
+    Stack(int size) {
+        this.size = size;
+        this.stack = new ArrayList<T>(size);
+    }
 
     boolean isEmpty() {
-        return size == 0;
+        return top == -1;
     }
 
     public T top() {
         if (isEmpty()) {
+            System.out.println("Stack is empty!");
             return null;
         }
-        return (T)stack.get(size - 1);
+        return (T)stack.get(top);
     }
 
     public void push(T val) {
-        stack.add(val);
-        size++;
+        if (top + 1 == size) {
+            System.out.println("Stack is full!");
+            return;
+        } else {
+            stack.add(val);
+            top++;
+        }
     }
 
     public T pop() {
         if (isEmpty()) {
+            System.out.println("Stack is empty!");
             return null;
         }
-        T temp = (T)stack.get(size - 1);
-        stack.remove(size - 1);
-        size--;
+        T temp = (T)stack.get(top);
+        stack.remove(top);
+        top--;
         return temp;
     }
 
     public String toString() {
         String str = "Current Stack:\n";
-        for (int i = size; i > 0; i--) {
-            str += String.valueOf(stack.get(i - 1));
+        for (int i = top; i >= 0; i--) {
+            str += String.valueOf(stack.get(i));
             str += "\n";
         }
         return str;
     }
     public static void main(String[] args) {
-        Stack<Integer> s = new Stack<Integer>();
+        Stack<Integer> s = new Stack<Integer>(10);
         System.out.println(s.isEmpty());
         System.out.println(s.toString());
         System.out.println(s.top());
@@ -70,14 +84,16 @@ public class Stack<T> {
         s.pop();
         System.out.println(s.toString());
         System.out.println(s.isEmpty());
-        Stack<Integer> s2 = new Stack<Integer>();
+        Stack<Integer> s2 = new Stack<Integer>(5);
 
         s2.push(1);
         System.out.println(s.size);
         System.out.println(s2.size);
+        System.out.println(s.top);
+        System.out.println(s2.top);
 
 
-        Stack<String> s3 = new Stack<String>();
+        Stack<String> s3 = new Stack<String>(10);
         s3.push("hello");
         s3.push("hi");
         s3.push("hey");
