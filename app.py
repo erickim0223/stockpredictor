@@ -11,7 +11,7 @@ yfin.pdr_override()
 
 st.title("Stock Trend Predictor")
 
-user_input = st.text_input('Enter Stock Ticker', 'AAPL')
+user_input = st.text_input('Enter Stock Ticker', 'NFLX')
 df = web.get_data_yahoo(user_input, start='2010-01-01', end='2019-12-31')
 
 #Describing Data
