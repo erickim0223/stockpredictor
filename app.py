@@ -10,7 +10,7 @@ with st.sidebar:
     selected = option_menu(
         menu_title = "Main Menu",
         options = ["Economic Data", "Stock Searcher", "My Stocks", "Stock Predictor"],
-        icons = ["house", "house", "book", "graph-up-arrow"],
+        icons = ["clipboard-data", "search", "list", "graph-up-arrow"],
         menu_icon = "cast",
         default_index = 0,
     )

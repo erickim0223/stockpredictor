@@ -13,7 +13,6 @@ import plotly.graph_objs as go
 def stocksearcher():
     st.title("Stock Searcher")
     today = date.today()
-    st.subheader(today)
 
     user_input = st.text_input('Enter Stock Ticker', 'NFLX')
     df = web.get_data_yahoo(user_input, start='2010-01-01', end=today)
@@ -33,18 +32,6 @@ def stocksearcher():
 
     fig.update_layout(
         yaxis_title='Stock Price (USD per Shares)'
-    )               
-
-    # fig.update_xaxes(
-        # rangeslider_visible=True,
-        # rangeselector=dict(
-        #     buttons=list([
-        #         dict(count=15, label="15m", step="minute", stepmode="backward"),
-        #         dict(count=45, label="45m", step="minute", stepmode="backward"),
-        #         dict(count=1, label="HTD", step="hour", stepmode="todate"),
-        #         dict(count=3, label="3h", step="hour", stepmode="backward"),
-        #         dict(step="all")
-        #     ])
-        # )
-    # )
+    )
+    
     st.write(fig)
