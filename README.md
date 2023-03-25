@@ -1,5 +1,5 @@
 # Stock Predictor
-This project is a stock predictor to determine whether or not a stock should be bought. I made this project to use what I learned in my Intro to Machine Learning course and hopefully create a tool that can predict a stock's price. 
+This project is a stock predictor to determine whether or not a stock should be bought. I made this project to use what I learned in my Intro to Machine Learning course and hopefully create a tool that can predict a stock's price. It also provides other key economic indicators that will help me keep up to date with today's economic state. 
 Languages/Technologies used: 
 - Python
 - Streamlit 
@@ -12,8 +12,7 @@ Challenges:
 - Learning Streamlit framework/deploying my app
 
 Plan to add: <br>
-- More tabs like current economic data (inflation, interest rates, etc.)
-- Search a stock and get current data
-- Fix model/date of predictor
-- Nav bar
+- Enhance model of predictor
+- Add a way to add a searched stock to my list
+- Maybe, have an input select to choose which economic indicator/stock to look at one at a time
 - More style
