@@ -2,7 +2,6 @@ import streamlit as st
 from streamlit_option_menu import option_menu
 import stockpredictor as sp
 import mystocks as mys
-import stocksearcher as ss
 import economicdata as ed
 
 #Nav bar
@@ -18,7 +17,9 @@ with st.sidebar:
 if selected == "Economic Data":
     ed.economicdata()
 if selected == "Stock Searcher":
-    ss.stocksearcher()
+    st.title("Stock Searcher")
+    user_input = st.text_input('Enter Stock Ticker', 'NFLX')
+    mys.mystocks(user_input)
 if selected == "My Stocks":
     st.title("My Stocks")
     mys.mystocks('SPOT')
