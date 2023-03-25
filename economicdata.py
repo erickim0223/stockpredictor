@@ -26,7 +26,7 @@ def economicdata():
     curr_unemp_rate = str(unemployment_rate_df['UNRATE'][size - 1])
     last_date = date.strftime(unemployment_rate_df.index[size - 1], "%m-%d-%Y")
 
-    st.write("As of " + last_date + ", Unemployment Rate: " + curr_unemp_rate)
+    st.write("As of " + last_date + " - Unemployment Rate: " + curr_unemp_rate)
     fig = plt.figure(figsize = (12, 6))
     plt.plot(unemployment_rates, 'b', label = 'Unemployment Rate')
     plt.ylabel('Unemployment Rate %')

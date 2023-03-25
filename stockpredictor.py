@@ -2,7 +2,7 @@ import numpy as np
 import pandas as pd
 import matplotlib.pyplot as plt
 import pandas_datareader.data as web
-import datetime as dt
+from datetime import date
 import yfinance as yfin
 from keras.models import load_model
 import streamlit as st
@@ -13,14 +13,13 @@ def stockpredictor():
 
     st.title("Stock Trend Predictor")
 
+    start_date = date(2018, 1, 1)
+    today = date.today()
+
+
     user_input = st.text_input('Enter Stock Ticker', 'NFLX')
-    df = web.get_data_yahoo(user_input, start='2010-01-01', end='2019-12-31')
+    df = web.get_data_yahoo(user_input, start=start_date, end=today)
     df = df.drop(['Adj Close'], axis = 1)
-
-
-    #Describing Data
-    st.subheader('Data from 2010 - 2019')
-    st.write(df.describe())
 
     #Visualizations
     st.subheader('Closing Price vs Time chart')

@@ -20,6 +20,9 @@ if selected == "Economic Data":
 if selected == "Stock Searcher":
     ss.stocksearcher()
 if selected == "My Stocks":
-    mys.mystocks()
+    st.title("My Stocks")
+    mys.mystocks('SPOT')
+    mys.mystocks('AMZN')
+    mys.mystocks('GOOGL')
 if selected == "Stock Predictor":
     sp.stockpredictor()
