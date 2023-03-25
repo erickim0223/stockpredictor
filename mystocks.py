@@ -29,11 +29,13 @@ def mystocks(stockname):
     price_diff = round(df['Close'][size - 1] - df['Close'][size - 2], 2)
     percent_diff = round((((df['Close'][size - 1] - df['Close'][size - 2])/df['Close'][size - 2]) * 100), 2)
 
+    color = 'green'
     icon_str = '<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css" integrity="sha384-b6lVK+yci+bfDmaY1u0zE8YYJt0TZxLEAFyYSLHId4xoVvsrQu3INevFKo+Xir8e" crossorigin="anonymous">'
     if (price_diff > 0):
         price_diff = icon_str + "<p style='color: green;'>+" + str(price_diff) +  " (" + str(percent_diff) + "%) <i class='bi bi-arrow-up'></i> since " + sec_to_last_date + "</p>"
     else:
-        price_diff = icon_str + "<p style='color: red;'>-" + str(price_diff) +  " (" + str(percent_diff) + "%) <i class='bi bi-arrow-down'></i> since " + sec_to_last_date + "</p>"
+        color = 'red'
+        price_diff = icon_str + "<p style='color: red;'>" + str(price_diff) +  " (" + str(percent_diff) + "%) <i class='bi bi-arrow-down'></i> since " + sec_to_last_date + "</p>"
     
     st.markdown(price_diff, unsafe_allow_html=True)
 
@@ -56,5 +58,7 @@ def mystocks(stockname):
             ])
         )
     )
+
+    fig['data'][0]['line']['color'] = color
 
     st.write(fig)
