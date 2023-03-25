@@ -2,9 +2,12 @@ from datetime import date
 import pandas_datareader as pdr
 import streamlit as st
 import matplotlib.pyplot as plt
+import yfinance as yfin
 import plotly.express as px
 
 def economicdata():
+    yfin.pdr_override()
+
     today = date.today()
     today_str = date.strftime(today, "%m-%d-%Y")
     st.title("Economic Data " + today_str)

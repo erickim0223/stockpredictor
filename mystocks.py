@@ -11,9 +11,9 @@ from datetime import date
 import plotly.graph_objs as go 
 import plotly.express as px
 
-
-
 def mystocks(stockname):
+    yfin.pdr_override()
+
     today = date.today()
     df = web.get_data_yahoo(stockname, start='2010-01-01', end=today)
 
