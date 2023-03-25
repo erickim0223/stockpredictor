@@ -29,7 +29,8 @@ def economicdata():
 
     fig.update_layout(
         yaxis_title='Unemployment Rate %',
-        xaxis_title=''
+        xaxis_title='',
+        hovermode='x unified'
     )
 
     fig.update_xaxes(

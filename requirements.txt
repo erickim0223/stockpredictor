@@ -8,7 +8,7 @@ pandas-datareader==0.10.0
 plotly==5.13.1
 scikit-learn==1.2.2
 scipy==1.10.1
-sklearn==0.0.post1
+scikit-learn=1.2.2
 streamlit==1.20.0
 streamlit-option-menu==0.3.2
 tensorboard==2.11.2

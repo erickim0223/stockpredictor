@@ -43,7 +43,8 @@ def mystocks(stockname):
 
     fig.update_layout(
         yaxis_title='Stock Price (USD per Shares)',
-        xaxis_title=''
+        xaxis_title='',
+        hovermode='x unified'
     )
 
     fig.update_xaxes(
