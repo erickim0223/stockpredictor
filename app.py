@@ -3,6 +3,7 @@ from streamlit_option_menu import option_menu
 import stockpredictor as sp
 import mystocks as mys
 import economicdata as ed
+from datetime import date
 
 #Nav bar
 with st.sidebar:
@@ -15,7 +16,16 @@ with st.sidebar:
     )
 
 if selected == "Economic Data":
-    ed.economicdata()
+    today = date.today()
+    today_str = date.strftime(today, "%m-%d-%Y")
+    st.title("Economic Data " + today_str)
+    ed.economicdata("Unemployment Rate", "UNRATE")
+    ed.economicdata("Inflation Rate", "CORESTICKM159SFRBATL")
+    ed.economicdata("Federal Funds Effective Rate", "FEDFUNDS")
+    ed.economicdata("10 Year Treasury Rate", "DGS10")
+    ed.economicdata("2's 10's Spread", "T10Y2Y")
+    ed.snp_gdp("S&P 500", "SP500")
+    ed.snp_gdp("Real Gross Domestic Product", "GDPC1")
 if selected == "Stock Searcher":
     st.title("Stock Searcher")
     user_input = st.text_input('Enter Stock Ticker', 'NFLX')
@@ -25,5 +35,6 @@ if selected == "My Stocks":
     mys.mystocks('SPOT')
     mys.mystocks('AMZN')
     mys.mystocks('GOOGL')
+    mys.mystocks('BAC')
 if selected == "Stock Predictor":
     sp.stockpredictor()
