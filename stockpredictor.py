@@ -137,8 +137,8 @@ def stockpredictor():
     future = m.make_future_dataframe(periods=period)
     forecast = m.predict(future)
 
-    st.subheader("Forecast Data")
-    st.write(forecast.tail())
+    # st.subheader("Forecast Data")
+    # st.write(forecast.tail())
 
     st.write("Forecast Data")
     fig4 = plot_plotly(m, forecast)
