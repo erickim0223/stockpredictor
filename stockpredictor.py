@@ -25,10 +25,10 @@ def stockpredictor():
     df = df.drop(['Adj Close'], axis = 1)
 
     #Visualizations
-    st.subheader('Closing Price vs Time chart')
-    fig = plt.figure(figsize = (12,6))
-    plt.plot(df.Close)
-    st.pyplot(fig)
+    # st.subheader('Closing Price vs Time chart')
+    # fig = plt.figure(figsize = (12,6))
+    # plt.plot(df.Close)
+    # st.pyplot(fig)
 
     st.subheader('Closing Price vs Time chart with 100MA')
     ma100 = df.Close.rolling(100).mean()
