@@ -16,7 +16,7 @@ def stockpredictor():
 
     st.title("Stock Trend Predictor")
 
-    start_date = date(2018, 1, 1)
+    start_date = date(2020, 1, 1)
     today = date.today()
 
 
