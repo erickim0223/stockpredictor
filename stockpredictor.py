@@ -93,6 +93,8 @@ def stockpredictor():
     plt.legend()
     st.pyplot(fig2)
 
+
+    # Prophet model
     START = "2020-01-01"
     td = today.strftime("%Y-%m-%d")
 
