@@ -113,9 +113,6 @@ def stockpredictor():
     data = load_data(user_input)
     # data_load_state.text("Loading data...done!")
 
-    # st.subheader("Raw data")
-    # st.write(data.head())
-
     def plot_raw_data():
         fig3 = go.Figure()
         fig3.add_trace(go.Scatter(x=data['Date'], y=data['Open'], name='stock_open'))
