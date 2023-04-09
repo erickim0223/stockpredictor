@@ -47,7 +47,6 @@ def stockpredictor():
     st.pyplot(fig)
 
     #Splitting Data into Training and Testing
-
     data_training = pd.DataFrame(df['Close'][0:int(len(df) * 0.70)])
     data_testing = pd.DataFrame(df['Close'][int(len(df) * 0.70):int(len(df))])
 
