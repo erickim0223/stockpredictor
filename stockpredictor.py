@@ -108,9 +108,7 @@ def stockpredictor():
         data.reset_index(inplace=True)
         return data
 
-    # data_load_state = st.text("Load data...")
     data = load_data(user_input)
-    # data_load_state.text("Loading data...done!")
 
     def plot_raw_data():
         fig3 = go.Figure()
