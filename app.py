@@ -1,4 +1,5 @@
 import streamlit as st
+import holidays
 from streamlit_option_menu import option_menu
 import stockpredictor as sp
 import mystocks as mys
