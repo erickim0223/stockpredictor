@@ -19,7 +19,6 @@ charset-normalizer==2.1.1
 clikit==0.6.2
 cmdstanpy==1.1.0
 comm==0.1.3
-conda==23.10.1
 contourpy==1.0.7
 convertdate==2.4.0
 crashtest==0.3.1
