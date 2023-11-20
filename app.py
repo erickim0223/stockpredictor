@@ -1,6 +1,7 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
 import stockpredictor as sp
+import holidays
 import mystocks as mys
 import economicdata as ed
 from datetime import date
