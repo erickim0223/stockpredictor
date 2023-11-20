@@ -7,7 +7,6 @@ import yfinance as yfin
 from keras.models import load_model
 import streamlit as st
 from streamlit_option_menu import option_menu
-import holidays
 from prophet import Prophet
 from prophet.plot import plot_plotly
 from plotly import graph_objs as go
