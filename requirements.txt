@@ -1,3 +1,4 @@
+holidays==0.25
 keras==2.11.0
 lxml==4.9.2
 matplotlib==3.7.1
