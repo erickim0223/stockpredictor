@@ -1,6 +1,6 @@
 import streamlit as st
 from streamlit_option_menu import option_menu
-# import stockpredictor as sp
+import stockpredictor as sp
 import mystocks as mys
 import economicdata as ed
 from datetime import date
@@ -36,5 +36,5 @@ if selected == "My Stocks":
     mys.mystocks('AMZN')
     mys.mystocks('GOOGL')
     mys.mystocks('BAC')
-# if selected == "Stock Predictor":
-#     sp.stockpredictor()
+if selected == "Stock Predictor":
+    sp.stockpredictor()
