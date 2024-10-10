@@ -5,8 +5,6 @@ Languages/Technologies used:
 - Streamlit 
 <br>
 
-For the live site, click here: [https://erickim0223-stockpredictor-app-752ms5.streamlit.app/](https://erickim0223-stockpredictor-app-752ms5.streamlit.app/) <br>
-
 Challenges:
 - Downloading all the python libraries (There was trouble in downloading the tensorflow library)
 - Learning Streamlit framework/deploying my app
